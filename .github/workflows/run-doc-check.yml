@@ -1,0 +1,22 @@
+name: Continuous Integration
+
+on:
+  pull_request
+
+jobs:
+  doc-check:
+    name: Run Documentation Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Check Documentaiton
+        id: doc-check
+        uses: alexvuka1/doc-check@751af11d18203e4be30ef723eec3d1b717a02213
+        with:
+          openapi-path: docs/openapi.yaml
+          doc-path: readme.md
+          token: ${{ secrets.GITHUB_TOKEN }}
