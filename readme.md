@@ -100,7 +100,6 @@ You can fork or edit this source code !
 |---------|------------------------------|--------|-----------------------------|
 | ✅       | Login                        | GET    | /app/login                  |
 | ✅       | Logout                       | GET    | /app/logout                 |  
-| ✅       | Devides                      | GET    | /app/devices                |  
 | ✅       | Reconnect                    | GET    | /app/reconnect              | 
 | ✅       | User Info                    | GET    | /user/info                  |
 | ✅       | User Avatar                  | GET    | /user/avatar                |
@@ -116,15 +115,12 @@ You can fork or edit this source code !
 | ✅       | Send Location                | POST   | /send/location              |
 | ✅       | Send Poll / Vote             | POST   | /send/poll                  |
 | ✅       | Revoke Message               | POST   | /message/:message_id/revoke |
-| ✅       | React Message                | POST   | /message/:message_id/reaction  |
+| ✅       | React Message                | POST   | /message/:message_id/react  |
 | ✅       | Edit Message                 | POST   | /message/:message_id/update |
 | ✅       | Join Group With Link         | POST   | /group/join-with-link       |
 | ✅       | Leave Group                  | POST   | /group/leave                |
 | ✅       | Create Group                 | POST   | /group                      |
 | ✅       | Add Participants in Group    | POST   | /group/participants         |
-| ❌       | Remove Participant in Group  | DELETE | /group/participants         |
-| ❌       | Promote Participant in Group | POST   | /group/participants/promote |
-| ❌       | Demote Participant in Group  | POST   | /group/participants/demote  |
 
 ```
 ✅ = Available
