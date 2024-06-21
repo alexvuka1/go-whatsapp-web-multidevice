@@ -100,7 +100,7 @@ You can fork or edit this source code !
 |---------|------------------------------|--------|-----------------------------|
 | ✅       | Login                        | GET    | /app/login                  |
 | ✅       | Logout                       | GET    | /app/logout                 |  
-| ✅       | Device                       | GET    | /app/device                 |  
+| ✅       | Devices                      | GET    | /app/devices                |  
 | ✅       | Reconnect                    | GET    | /app/reconnect              | 
 | ✅       | User Info                    | GET    | /user/info                  |
 | ✅       | User Avatar                  | GET    | /user/avatar                |
