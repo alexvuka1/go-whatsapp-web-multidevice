@@ -115,9 +115,9 @@ You can fork or edit this source code !
 | ✅       | Send Link                    | POST   | /send/link                  |
 | ✅       | Send Location                | POST   | /send/location              |
 | ✅       | Send Poll / Vote             | POST   | /send/poll                  |
-| ❌       | Revoke Message               | POST   | /message/:message_id/revoke |
-| ❌       | React Message                | POST   | /message/:message_id/react  |
-| ❌       | Edit Message                 | POST   | /message/:message_id/update |
+| ✅       | Revoke Message               | POST   | /message/:message_id/revoke |
+| ✅       | React Message                | POST   | /message/:message_id/react  |
+| ✅       | Edit Message                 | POST   | /message/:message_id/update |
 | ✅       | Join Group With Link         | POST   | /group/join-with-link       |
 | ✅       | Leave Group                  | POST   | /group/leave                |
 | ✅       | Create Group                 | POST   | /group                      |
