@@ -108,14 +108,12 @@ func runRest(_ *cobra.Command, _ []string) {
 	appService := services.NewAppService(cli, db)
 	sendService := services.NewSendService(cli, appService)
 	userService := services.NewUserService(cli)
-	messageService := services.NewMessageService(cli)
 	groupService := services.NewGroupService(cli)
 
 	// Rest
 	rest.InitRestApp(app, appService)
 	rest.InitRestSend(app, sendService)
 	rest.InitRestUser(app, userService)
-	rest.InitRestMessage(app, messageService)
 	rest.InitRestGroup(app, groupService)
 
 	app.Get("/", func(c *fiber.Ctx) error {
