@@ -14,9 +14,9 @@ type Message struct {
 
 func InitRestMessage(app *fiber.App, service domainMessage.IMessageService) Message {
 	rest := Message{Service: service}
-	app.Post("/message/:uid/reaction", rest.ReactMessage)
-	app.Post("/message/:uid/revoke", rest.RevokeMessage)
-	app.Post("/message/:uid/update", rest.UpdateMessage)
+	app.Post("/message/:message_id/reaction", rest.ReactMessage)
+	app.Post("/message/:message_id/revoke", rest.RevokeMessage)
+	app.Post("/message/:message_id/update", rest.UpdateMessage)
 	return rest
 }
 
@@ -25,7 +25,7 @@ func (controller *Message) RevokeMessage(c *fiber.Ctx) error {
 	err := c.BodyParser(&request)
 	utils.PanicIfNeeded(err)
 
-	request.MessageID = c.Params("uid")
+	request.MessageID = c.Params("message_id")
 	whatsapp.SanitizePhone(&request.Phone)
 
 	response, err := controller.Service.RevokeMessage(c.UserContext(), request)
@@ -44,7 +44,7 @@ func (controller *Message) UpdateMessage(c *fiber.Ctx) error {
 	err := c.BodyParser(&request)
 	utils.PanicIfNeeded(err)
 
-	request.MessageID = c.Params("uid")
+	request.MessageID = c.Params("message_id")
 	whatsapp.SanitizePhone(&request.Phone)
 
 	response, err := controller.Service.UpdateMessage(c.UserContext(), request)
@@ -63,7 +63,7 @@ func (controller *Message) ReactMessage(c *fiber.Ctx) error {
 	err := c.BodyParser(&request)
 	utils.PanicIfNeeded(err)
 
-	request.MessageID = c.Params("uid")
+	request.MessageID = c.Params("message_id")
 	whatsapp.SanitizePhone(&request.Phone)
 
 	response, err := controller.Service.ReactMessage(c.UserContext(), request)

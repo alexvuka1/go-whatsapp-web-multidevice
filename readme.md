@@ -116,7 +116,7 @@ You can fork or edit this source code !
 | ✅       | Send Location                | POST   | /send/location              |
 | ✅       | Send Poll / Vote             | POST   | /send/poll                  |
 | ✅       | Revoke Message               | POST   | /message/:message_id/revoke |
-| ✅       | React Message                | POST   | /message/:message_id/react  |
+| ✅       | React Message                | POST   | /message/:message_id/reaction  |
 | ✅       | Edit Message                 | POST   | /message/:message_id/update |
 | ✅       | Join Group With Link         | POST   | /group/join-with-link       |
 | ✅       | Leave Group                  | POST   | /group/leave                |
